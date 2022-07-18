@@ -95,15 +95,12 @@ app.use(cors());
 // configure express to receive form data
 app.use(express.json());
 
+const port = process.env.PORT || 2002;
 // configure dotEnv
 dotEnv.config({ path: "./.env" });
-
-mongoose
-  .connect(process.env.MONGO_DB_LOCAL_URL, {
+mongoose.connect(process.env.MONGO_DB_LOCAL_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    // useFindAndModify: false,
-    // useCreateIndex: true,
   })
   .then((response) => {
     console.log("Connected to MongoDB Cloud Successfully......");
@@ -274,7 +271,8 @@ app.post('/logins', [
 // 	})
 // });
 
-http.listen(2002, function(){
+
+http.listen(port, function(){
   console.log('listening on *:2002');
 });
 
