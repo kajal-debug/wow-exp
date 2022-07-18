@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "multi-player socket.io app",
   "scripts": {
-    "start":"node nodeapps/game/app.js",
+    "start":"node app.js",
     "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix public_html/user && npm run build --prefix public_html/user"
   },
   "dependencies": {
