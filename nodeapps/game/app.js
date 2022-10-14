@@ -226,7 +226,7 @@ app.post('/logins', [
         if (pack.length>0) io.emit('remoteData', pack);
     }, 40);
 
-if(process.envNODE_ENV == "production"){
+if(process.env.NODE_ENV == "production"){
     app.use(express.static("public_html/user/build"));
 }
 http.listen(port, function(){

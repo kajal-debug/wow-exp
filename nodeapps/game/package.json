@@ -4,7 +4,7 @@
   "description": "multi-player socket.io app",
   "scripts": {
     "start":"node app.js",
-    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix public_html/user && --prefix public_html/user run build"
+    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix public_html/user && npm run build --prefix public_html/user"
   },
   "dependencies": {
     "express": "^4.15.2",
